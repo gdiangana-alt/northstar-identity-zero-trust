@@ -137,3 +137,82 @@ Before publishing screenshots or command output, remove or obscure:
 - Authentication information
 
 No credentials, secrets, or reusable authentication tokens should be committed to this repository.
+---
+
+# Visual Evidence
+
+The following sanitized screenshots provide direct evidence of the controls implemented during the NorthStar Identity & Zero Trust project.
+
+Sensitive identifiers, credentials, tokens, and personal account information are intentionally excluded.
+
+## 1. Microsoft Entra Security Groups
+
+Four role-oriented security groups were created to support group-based authorization and identity lifecycle management.
+
+![Microsoft Entra Security Groups](entra-security-groups.png)
+
+**Demonstrates:** Microsoft Entra group administration, role-oriented access design, and group-based identity management.
+
+---
+
+## 2. Azure RBAC Role Assignments
+
+Azure RBAC assignments demonstrate least-privilege authorization for administrative, security, and workload identities.
+
+![Azure RBAC Role Assignments](azure-rbac-role-assignments.png)
+
+**Demonstrates:** Azure RBAC, group-based authorization, managed identity authorization, role separation, and resource-group scoped access.
+
+---
+
+## 3. Azure ABAC Container Condition
+
+An Azure ABAC condition restricts selected blob operations using the target resource's container name.
+
+![Azure ABAC Container Condition](azure-abac-container-condition.jpg)
+
+**Condition:**
+
+`Container name StringEquals northstar-app-data`
+
+**Demonstrates:** Attribute-based authorization layered onto Azure RBAC.
+
+---
+
+## 4. Azure Policy — Mandatory Data Classification
+
+Azure Policy requires NorthStar resources to carry the centrally defined classification:
+
+`DataClassification=Internal`
+
+![Azure Policy Data Classification](azure-policy-data-classification.jpg)
+
+**Demonstrates:** Centralized governance and MAC-style mandatory classification enforcement.
+
+---
+
+## 5. Microsoft Entra Security Defaults
+
+Security Defaults are enabled in the Microsoft Entra tenant.
+
+![Microsoft Entra Security Defaults](entra-security-defaults-enabled.jpg)
+
+**Demonstrates:** Baseline tenant-level identity protection and Zero Trust-aligned authentication controls.
+
+---
+
+## 6. Microsoft Authenticator
+
+Microsoft Authenticator is enabled and targeted to all users in the lab tenant.
+
+![Microsoft Authenticator](entra-microsoft-authenticator-all-users.jpg)
+
+**Demonstrates:** Organization-wide authentication-method configuration supporting stronger user authentication.
+
+---
+
+## Evidence Integrity
+
+The screenshots are provided as implementation evidence rather than decorative documentation. Together with the automation scripts and troubleshooting records, they demonstrate that the documented controls were configured and validated in the Azure and Microsoft Entra environment.
+
+Where functionality could not be implemented or reproduced because of licensing or access constraints, the limitation is explicitly documented rather than represented as deployed.
