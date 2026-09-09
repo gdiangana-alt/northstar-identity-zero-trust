@@ -142,7 +142,7 @@ This demonstrates a **MAC-style centralized enforcement model**, where centrally
 
 ## Zero Trust Authentication
 
-The project applies the principle that identity should be explicitly verified before access is trusted.
+The project demonstrates a Zero Trust-aligned identity architecture using baseline authentication controls, least-privilege authorization, workload identities, centralized policy enforcement, and auditable identity lifecycle changes.
 
 ### Security Defaults
 
