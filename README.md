@@ -273,6 +273,16 @@ Reusable script:
 
 The automation files intentionally avoid hardcoded tenant IDs, subscription IDs, principal IDs, and credentials.
 
+## Terraform Identity Management
+
+The existing `NorthStar-App-Identity` and its resource-group-scoped Reader assignment are managed through Terraform. Both resources were imported into isolated Azure remote state and validated against the live environment with a zero-change plan.
+
+Pull-request workflows enforce Terraform formatting, configuration validation, and Checkov infrastructure security scanning before changes reach `main`.
+
+Control documentation:
+
+[`docs/terraform-identity-control.md`](docs/terraform-identity-control.md)
+
 ## Troubleshooting
 
 The project records real implementation problems using:
@@ -366,18 +376,26 @@ See:
 
 ```text
 northstar-identity-zero-trust/
+├── .github/workflows/
+│   ├── terraform-quality.yml
+│   └── terraform-security.yml
+├── .gitignore
 ├── README.md
 ├── docs/
 │   ├── architecture.md
 │   ├── completion-matrix.md
+│   ├── terraform-identity-control.md
 │   └── troubleshooting.md
 ├── evidence/
 │   └── README.md
-└── scripts/
-    ├── azure-cli/
-    │   └── managed-identity.sh
-    └── powershell/
-        └── northstar-identity-inventory.ps1
+├── scripts/
+│   ├── azure-cli/managed-identity.sh
+│   └── powershell/northstar-identity-inventory.ps1
+└── terraform/
+    ├── .terraform.lock.hcl
+    ├── main.tf
+    ├── providers.tf
+    └── versions.tf
 ```
 
 ## Skills Demonstrated
@@ -397,6 +415,12 @@ northstar-identity-zero-trust/
 - Azure Storage Authorization
 - PowerShell
 - Azure CLI
+- Terraform
+- Infrastructure as Code
+- Azure Remote State
+- GitHub Actions
+- Checkov
+- Protected Pull-Request Gates
 - Security Troubleshooting
 - Cloud Security Architecture
 

@@ -17,6 +17,12 @@ This matrix distinguishes controls that were implemented hands-on from capabilit
 | Conditional Access | 📘 Documented | Enterprise Zero Trust progression; not deployed in the Entra Free lab |
 | Managed Identity | ✅ Implemented | `NorthStar-App-Identity` created as a user-assigned managed identity |
 | Workload RBAC | ✅ Implemented | Managed identity assigned Reader at resource-group scope |
+| Terraform identity import | ✅ Verified | Existing managed identity imported with a zero-change plan |
+| Terraform RBAC import | ✅ Verified | Existing Reader assignment imported without duplication or modification |
+| Azure remote state | ✅ Implemented | Isolated state key with Microsoft Entra authentication and blob locking |
+| Terraform quality gate | ✅ Verified | Formatting and validation passed on pull request #1 |
+| Terraform security gate | ✅ Verified | Checkov infrastructure scan passed on pull request #1 |
+| Protected main branch | ✅ Implemented | Required checks, strict mode, administrator enforcement, and destructive-action restrictions |
 | Identity lifecycle | ✅ Demonstrated | Employee group membership removed during leaver simulation |
 | Entra audit logging | ✅ Verified | Successful `Remove member` lifecycle event observed |
 | Sign-in log analysis | ⚠️ Access constrained | Attempt returned 401 insufficient privileges; constraint documented |
