@@ -283,6 +283,9 @@ Control documentation:
 
 [`docs/terraform-identity-control.md`](docs/terraform-identity-control.md)
 
+[View Terraform delivery evidence](evidence/README.md)
+
+
 ## Troubleshooting
 
 The project records real implementation problems using:

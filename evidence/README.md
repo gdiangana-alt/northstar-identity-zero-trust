@@ -216,3 +216,27 @@ Microsoft Authenticator is enabled and targeted to all users in the lab tenant.
 The screenshots are provided as implementation evidence rather than decorative documentation. Together with the automation scripts and troubleshooting records, they demonstrate that the documented controls were configured and validated in the Azure and Microsoft Entra environment.
 
 Where functionality could not be implemented or reproduced because of licensing or access constraints, the limitation is explicitly documented rather than represented as deployed.
+
+---
+
+## 7. Terraform Pull-Request Gates
+
+![Terraform quality and security checks](screenshots/01-terraform-pr-checks.jpg)
+
+**Demonstrates:** successful Terraform formatting, validation, and Checkov infrastructure-security checks before merge.
+
+---
+
+## 8. Required Terraform Validation Checks
+
+![Required Terraform branch-protection checks](screenshots/02-branch-protection-required-checks.jpg)
+
+**Demonstrates:** strict synchronization, required Terraform quality and security checks, conversation resolution, and linear history.
+
+---
+
+## 9. Administrator Enforcement and Destructive-Action Restrictions
+
+![Administrator enforcement and protected-branch restrictions](screenshots/03-branch-protection-admin-restrictions.jpg)
+
+**Demonstrates:** administrator enforcement, with force pushes and branch deletion disabled.
