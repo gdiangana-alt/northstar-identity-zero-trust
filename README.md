@@ -7,6 +7,18 @@
 ![Zero Trust](https://img.shields.io/badge/Security-Zero%20Trust-success)
 ![Status](https://img.shields.io/badge/Project-Complete-brightgreen)
 
+## Enterprise IAM Architecture Case Study
+
+[Read the Enterprise IAM & Zero Trust Architecture case study](docs/enterprise-iam-architecture.md).
+
+Designed a hybrid AD/Microsoft Entra target-state architecture for a fictional
+5,500-person enterprise, covering JML/IGA, SSO and federation, authorization,
+privileged access, workload identities, monitoring, and recovery.
+
+Includes ten architecture decisions, a threat model, and sixteen acceptance
+scenarios. Existing lab implementations are distinguished from proposed
+enterprise capabilities; enterprise deployment tests remain pending.
+
 ## Project Overview
 
 This project demonstrates the design and implementation of an enterprise identity and Zero Trust security model for the fictional NorthStar organization.
